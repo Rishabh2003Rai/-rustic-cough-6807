@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        #container{
+            width:45%;
+            margin:auto;
+            text-align:center;
+            margin-top:150px;
+        }
+        #social{
+            display:flex;
+            margin:auto;
+           margin-top:70px;
+           margin-bottom:20px;
+        }
+        #social>div{
+            
+            display:flex;
+            margin:auto;
+            height:50px;
+            width:160px;
+            border-radius:50px
+        }
+        #social>div>img{
+            width:55px;
+            border-radius:50px;
+            height:50px;
+        }
+        #forum{
+            display:flex;
+            flex-direction:column;
+            width:95%;
+            margin:auto;
+            margin-top:70px;
+        }
+        #forum>input{
+            height:50px;
+            width:500px;
+            margin:10px auto;
+            border-radius:25px;
+            border:1px solid grey;
+            padding-left:20px
+        }
+        #btn{
+            color: white;
+            background-color: blue;
+            margin:200px;
+            padding:10px;
+          
+        }
+        #social>div>a{
+            margin-left:20px;
+            color:white;
+            text-decoration: none;
+           display:flex;
+           align-items:center;
+        
+        }
+        #container>p{
+            color:grey;
+        }
+        p>a{
+            color:grey;
+        }
+        #footer{
+            display:grid;
+            grid-template-columns: repeat(5,1fr);
+            gap:20px;
+            margin:auto;
+            margin-left:20px;
+            color:grey;
+            background-color: whitesmoke;
+            margin-top:100px;
+
+        }
+        .bold{
+            font-weight:bold;
+            color:rgb(87, 84, 84);
+            margin-bottom:30px;
+        }
+        #footest{
+            text-align:center;
+            color:grey
+        }
+        #pHr{
+            margin-bottom:30px;
+        }
+        h1{
+            color:grey;
+
+        }
+        h2{
+            color:grey;
+        }
+    </style>
+</head>
+<body>
+    
+<div id="container">
+
+            <div><h1>LOGIN</h1></div>
+
+            <div id="social">
+
+                    <div style="background-color: rgb(42, 75, 169)">
+                            <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/800px-Facebook_logo_%28square%29.png" alt="facebook">
+                            <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=846735432885025&kid_directed_site=0&app_id=846735432885025&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv3.3%2Fdialog%2Foauth%3Fclient_id%3D846735432885025%26redirect_uri%3Dhttps%253A%252F%252Fapp.getflits.com%252Fapi%252Fsocial_login%252Ffacebook%252Fauth%252Fcallback%26scope%3Demail%26response_type%3Dcode%26state%3DeyJzaG9wX25hbWUiOiJoZWFkcGhvbmUtem9uZS5teXNob3BpZnkuY29tIiwidG9rZW4iOiJhNmRiOTMyMDE5MDViYjFhODllYzlmMDU3ZGE3YTczNiJ9%26auth_type%3Drerequest%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D87b1b9bc-4bb6-4424-aeee-49ed5512859f%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fapp.getflits.com%2Fapi%2Fsocial_login%2Ffacebook%2Fauth%2Fcallback%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DeyJzaG9wX25hbWUiOiJoZWFkcGhvbmUtem9uZS5teXNob3BpZnkuY29tIiwidG9rZW4iOiJhNmRiOTMyMDE5MDViYjFhODllYzlmMDU3ZGE3YTczNiJ9%23_%3D_&display=page&locale=en_GB&pl_dbl=0"><h3 style="color:white">Facebook</h3></a>                    
+                    </div>
+                        <div style="background-color: rgb(66, 133, 244);">
+                            <img src="https://blog.hubspot.com/hubfs/image8-2.jpg" alt="google">
+                            <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=378826172517-gjhd7esiva3nj7aott9sri1p5sfm4tcu.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fapp.getflits.com%2Fapi%2Fsocial_login%2Fgoogle%2Fauth%2Fcallback&scope=openid%20profile%20email&response_type=code&state=eyJzaG9wX25hbWUiOiJoZWFkcGhvbmUtem9uZS5teXNob3BpZnkuY29tIiwidG9rZW4iOiJhNmRiOTMyMDE5MDViYjFhODllYzlmMDU3ZGE3YTczNiJ9&flowName=GeneralOAuthFlow"><h3>Google</h3></a>
+                        </div>
+                        <div  style="background-color: rgb(0, 172, 237);">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMUAAACPCAMAAAB9Je/IAAAASFBMVEX///9dqd1WptxOo9v7/f5rr9+RwuZkrN7F3vH3+v2bx+jb6vbz+Pzi7vjn8fnW5/WpzutCntl1tOG72O+z0+2CuuPM4vOKvuUfecxkAAAFDklEQVR4nO2c65azKgyGaxCwKKh4uv873dbWfm3HAyBB91o8P2d54G0SkiDM7RaJRCKRSCQSiUQikUgkEomskBZKFfezR+FOqvqqI/UE4SKTxdkjsifNGCUEkhcAJBlatXLx2t/PJtPjwJNvALhY8q1UVMHHZ0Kp618JTwg0vzpUS0iOMopCHrk7FcmyhknH8PVsWVECA070C33gufeOrGp4+BXv35dmmo96IfMw5L8UNRmcb87ppoiRuhkvu8uekelKcH/XJhVJiGvASbruTW9ztFk18HkCIzgzVEGnNzneuy9iEvK+jLi9aJfsaXeXp+/ExJIckXoXMFE9R0Iah1vNLPEhQiNl9GKYHdbaGtLaEslbhOfZVtH5HbWltVPDoPhjiTRvO78ibvm/H5QwK3s3liLq5+NlyyDxPVGVH25h5bZFZ6cC2vR2L8WY+cB/4ss+nRtIaXxjbxkVVcP4WLQDymzbfA0GEtM3pMw2KsgraxDmXcSPivFlndn0cbedoN4vGBBm2+x3NJAYea2tQ82QDiNl/B0NgMlcJWwz3ksETt7LF35ToNlu6qB/bzMAOpxiUPKlt9V6pyFLnUQQhlRGrUz7kIjNDlA5iVhsxL2w5uCjjg3r5w4iwKHgNGW9kCA1k2seUNqLoDirBk+WA+OlI2ErcV5aT1EgEEXcbpv1ECR80bHsbQEIKftzQPX260mt2/x3lpdXU3Hb7ROAJJ3IvoQUl1NhUkyMlRynoi/SOUw2omkZjCLwE9PyFIDU0Im2L3OpLLsL9Oi2c/JRCiHAtb0tsFXcsp0A9wHWStQHwrVbsFCBmLlfpAxdBsFZZX7SvIq+wa1fsFBh3tLbw2pWTsnZse0xB7OMEmNTr0U2CundGh9TKObnvJY8Zs8xp2nWYYoAlH575p244c/3Rb8qsNq8iRw7HGYVqF9WlQ4kAzVdpOhz0wvMidZ+6dsRjrs7RFnXdS6ARhUx5r0QxkCvBVWAgjapMTP3BHoJNUIws8VEgMhAb/RuDl98rSH9/igOY91E24JaCs4UHFcGbhH1pt/Y4+RDBX63GkAGD7UVskR0KuxlwQ9yjbaAUB/a0mdHKgiOOdBrqG/KAaXfQ13DWeDe69q7X4EOvg04VYJ6Lkgcd/O5oYpZR2u78WmbYNPsg1azic5+OXwT5/2hTuTwwquG0aGCFB8zd5yeL8BS+Rc9hgi0XZurYNTnSLvKN1D+SxCsXeVbVN5lIO0q3+Tuex0hdGg/UX7zHdaBkT2k13QBASvybxkerRG6lv2U4a1Zwv9Mv4FiflY8w+e7b7Lds0YmIvhZQTFTCH5YR5DVwB1km6ycJDQVEbI12iB/NH2uhXrQ/m4H1TeNUzo/dXpaoHT5BIu2hdmNwmnHEcE6zuZG6ZQBryWiYE4r0JeKCVU5rXdCqEV+E2TrlvcMD9IEQTLHGgQo7j4JY+5FQx3XzgGGS8S1KtsBXNf/zU/JISKzqtOJ+yeMWp9TxErWsWpEsI5OO5YP1H/AzzNExWsyDf9gmwpk6/QPOqo6VoA/NdS6PzmsD3dEAPQKOUIe0QGk+/P/V05CtcTNsR6+dKH/TZT2HbcM8fFyempML5LbJLxxYqY/J5WuQiGb7nkafk9CnYjycmb4JK805bCYQp5f/ahm1zTCD0XZVKLT/JHPZ8bsyGknqqa/tA1+SAslZd5nTdO2bdNkj2NhqrhEyRqJRCKRSCQSiUQikf89/wFLrjz4j99hlQAAAABJRU5ErkJggg==" alt="twitter">
+                            <a href="https://api.twitter.com/oauth/authorize?oauth_token=f3-vuAAAAAAA2tl0AAABgB76Akg"><h3> Twitter</h3></a>
+                    </div>
+
+            </div>
+
+        <div id="pHr" style="display:flex; flex-direction:row;align-items:center">
+            <hr style="width: 139px;">
+            <h2>LOGIN WITH SOCIAL OR</h2> 
+            <hr style="width: 139px;">
+        </div>
+        <p>Please enter your e-mail and password: </p>
+        
+            <form id="forum">
+                <input type="=email" placeholder="E-mail">
+                <input id="pass" type="password" placeholder="Password">
+                <input id="btn" type="submit" value="LOGIN">
+            </form>
+            <p>
+                New customer?
+                <a href="https://www.headphonezone.in/account/register">Create An Account</a>
+            </p>
+</div>
+
+
+<div id="footer">
+    <div>
+        <p class="bold">LET US HELP</p>
+        <p>Help Center</p>
+        <p>Track My Order</p>
+        <p>Cancel My Order</p>
+        <p>Return My Order</p>
+        <p>Request a Product</p>
+        <p>Report a Bug</p>
+        <p>Contact Us</p>
+    </div>
+    <div>
+        <p class="bold">OUR POLICIES</p>
+        <p>Shipping & Delivery</p>
+        <p>Returns, Refunds & Cancellations</p>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+    </div>
+    <div>
+        <p class="bold">COMMUNITY</p>
+        <p>Headphone Zone Merchandise</p>
+        <p>Trade-Up Program</p>
+        <p>The Insider</p>
+    </div>
+    <div>
+        <p class="bold">BEWARE OF FAKES</p>
+        <p>Don't get fooled. Look out for smuggled & refurbished headphones while shopping online.</p>
+        <p>Headphone Zone is a professionally run business & deals only in 100% genuine headphones.</p>
+        <p><a href="">Learn more</a></p>
+    </div>
+    <div>
+        <p class="bold">FOLLOW US</p>
+        <p></p>
+    </div>
+    
+</div>
+<hr>
+
+<div id="footest">
+    <p>Owned, Operated & Funded by Proud Indians</p>
+    <p>Copyright ©2011-2022 <a href="https://www.headphonezone.in/">Headphone Zone.</a></p>
+    <p>Everything on this website has been made with a lot of love and hard work. If you copy anything we will hunt you down. We mean it.</p>
+</div>
+</body>
+</html>
